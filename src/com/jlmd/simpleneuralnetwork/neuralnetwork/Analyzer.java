@@ -38,7 +38,7 @@ public class Analyzer {
         for (int i = 0;i<neurons;i++){
             float sum = 0;
             for (int j=0; j<dimension; j++){
-                sum = sum + (x[j] * wWeights[j][i]);
+                sum += (x[j] * wWeights[j][i]);
             }
 
             this.fOutArray[i] = transferFunction.transfer(sum + bias[i]);
