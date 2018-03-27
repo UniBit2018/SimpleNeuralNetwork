@@ -59,18 +59,21 @@ public class DataUtils {
 
     /**
      * Convert array of strings to array of float
-     * @param num Array of string
+     * @param numbers Array of string
      * @return array of float
      */
-    private static float[] convertStringArrayToFloatArray(String[] num){
-        if (num != null) {
-            float fArray[] = new float[num.length];
-            for (int i = 0; i <num.length; i++) {
-                fArray[i] = Float.parseFloat(num[i]);
-            }
-            return fArray;
+    private static float[] convertStringArrayToFloatArray(String[] numbers){
+        if (numbers == null) {
+            return null;
         }
-        return null;
+        
+        float array[] = new float[numbers.length];
+        
+        for (String number : numbers) {
+            array[i] = Float.parseFloat(number);
+        }
+        
+        return array;
     }
 
 }
